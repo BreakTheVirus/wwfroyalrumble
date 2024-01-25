@@ -179,7 +179,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
 .characterLayout {
   display: flex;
   flex-wrap: wrap;  
-  overflow: auto;
+  overflow: hidden;
   height: 100%;
   padding: 0px 20px 20px 20px;
 }
@@ -323,7 +323,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
 
 @media (max-width: 700px) {
   .body {
-    overflow: hidden;
+    overflow: auto;
   }
   .selectSystemMenu {
     flex-direction: column;
@@ -335,11 +335,11 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
     margin-bottom: 50px;
   }
   .characterLayout {
-    overflow: hidden;
+    overflow: auto;
   }
   .characterLayout > div {
     width: 45%;
-    max-height: 300px;
+    max-height: 200px;
   }
   .flexContent > div {
     flex-direction: column;
@@ -347,10 +347,11 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
   .flexContent > div > div {
     width: 90%;
   }
-   .characterBio > div  {
+  .characterBio > div  {
     width: 90%;
   }
   .sigArea > div {
     width: 80%;
   }
+
 }
