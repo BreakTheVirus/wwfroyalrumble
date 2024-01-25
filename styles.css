@@ -347,5 +347,10 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
   .flexContent > div > div {
     width: 90%;
   }
-
+   .characterBio > div  {
+    width: 90%;
+  }
+  .sigArea > div {
+    width: 80%;
+  }
 }
