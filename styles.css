@@ -324,6 +324,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
 @media (max-width: 700px) {
   .body {
     overflow: auto;
+    height: fit-content;
   }
   .selectSystemMenu {
     flex-direction: column;
@@ -336,6 +337,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
   }
   .characterLayout {
     overflow: auto;
+    height: fit-content;
   }
   .characterLayout > div {
     width: 45%;
