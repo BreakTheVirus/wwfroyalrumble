@@ -180,7 +180,6 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
   display: flex;
   flex-wrap: wrap;  
   overflow: hidden;
-  height: 100%;
   padding: 0px 20px 20px 20px;
 }
 
@@ -193,8 +192,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
   background-image: url('images/charactercard.png');
   background-size: cover;
   background-position: center center;
-  height: 45%;
-  width: 15%;
+  width: 200px;
   overflow: hidden;
 }
 
@@ -339,10 +337,7 @@ body::-webkit-scrollbar, .snesCharacters::-webkit-scrollbar,
     overflow: auto;
     height: fit-content;
   }
-  .characterLayout > div {
-    width: 45%;
-    max-height: 200px;
-  }
+
   .flexContent > div {
     flex-direction: column;
   }
