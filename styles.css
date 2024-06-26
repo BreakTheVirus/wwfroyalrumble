@@ -320,15 +320,17 @@ sup {
 /* For Mobile */
 
 @media (max-width: 840px) {
-  .body {overflow: auto; height: fit-content;}
+  .body {overflow-x: hidden; height: fit-content;}
   header {font-size: .85em; height: 90px;}
-  .selectSystemMenu {flex-direction: column; width: 100%;}
-  .subMenu {flex-direction: column; width: 100%; margin-bottom: 50px;}
+  .selectSystemMenu {flex-direction: column; width: 90%;}
+  .subMenu {flex-direction: column; width: 90%; margin-bottom: 50px;}
   .characterLayout {overflow: auto; height: fit-content;}
   .flexContent > div {flex-direction: column;}
   .flexContent > div > div {width: 90%;}
+  .bioContainer {width: 90%; margin: 0 auto; padding-top: 20px;}
   .characterBio > div  {width: 90%;}
-  .sigArea > div {width: 80%;}
+  .sigArea {width: 90%;}
+  .sigArea > div {width: 100%;}
 }
 
 @media (max-width: 450px) {
