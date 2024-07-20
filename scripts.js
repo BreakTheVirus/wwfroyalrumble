@@ -94,11 +94,16 @@ function updateVolume(volume) {
    specific lines of code for each entrance theme.
 */
 function playFromBio() {
-  if (fromBio === 1) {
+  if (fromBio === 1 && entranceMusicOn === 1 && menuMusicOn === 0) {
+    stopAudio();
+  }
+
+  if (fromBio === 1 && entranceMusicOn === 1 && menuMusicOn === 1) {
     stopAudio();
     snesMenuTheme.play();
   }
   fromBio = 0;
+  console.log('Entrance Music: ' + entranceMusicOn + ', Menu Music: ' + menuMusicOn);
 }
 
 function stopAudio() {
@@ -121,6 +126,7 @@ function showSNES() {
   if (entranceMusicOn === 1 && fromBio === 1) {
     playFromBio();
   }
+  fromBio = 0;
   snes = 1; 
   sega = 0;
   setGifSize();
@@ -157,6 +163,7 @@ function showSega() {
   if (entranceMusicOn === 1 && fromBio === 1) {
     playFromBio();
   }
+  fromBio = 0;
   snes = 0;
   sega = 1;
   setGifSize();
@@ -313,9 +320,15 @@ function showMacho1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesMachoTheme = document.getElementById("snesMachoTheme");
+    snesMachoTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesMachoTheme = document.getElementById("snesMachoTheme");
     snesMachoTheme.play();
   }
@@ -361,9 +374,15 @@ function showPerfect1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesPerfectTheme = document.getElementById("snesPerfectTheme");
+    snesPerfectTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesPerfectTheme = document.getElementById("snesPerfectTheme");
     snesPerfectTheme.play();
   }
@@ -407,9 +426,15 @@ function showTaker1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesTakerTheme = document.getElementById("snesTakerTheme");
+    snesTakerTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesTakerTheme = document.getElementById("snesTakerTheme");
     snesTakerTheme.play();
   }
@@ -453,9 +478,15 @@ function showHart1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesHartTheme = document.getElementById("snesHartTheme");
+    snesHartTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesHartTheme = document.getElementById("snesHartTheme");
     snesHartTheme.play();
   }
@@ -498,9 +529,15 @@ function showTatanka1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesTatankaTheme = document.getElementById("snesTatankaTheme");
+    snesTatankaTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesTatankaTheme = document.getElementById("snesTatankaTheme");
     snesTatankaTheme.play();
   }
@@ -543,9 +580,15 @@ function showCrush1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesCrushTheme = document.getElementById("snesCrushTheme");
+    snesCrushTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesCrushTheme = document.getElementById("snesCrushTheme");
     snesCrushTheme.play();
   }
@@ -588,9 +631,15 @@ function showFlair1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesFlairTheme = document.getElementById("snesFlairTheme");
+    snesFlairTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesFlairTheme = document.getElementById("snesFlairTheme");
     snesFlairTheme.play();
   }
@@ -633,9 +682,15 @@ function showHBK1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesHBKTheme = document.getElementById("snesHBKTheme");
+    snesHBKTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesHBKTheme = document.getElementById("snesHBKTheme");
     snesHBKTheme.play();
   }
@@ -678,9 +733,15 @@ function showRazor1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesRamonTheme = document.getElementById("snesRamonTheme");
+    snesRamonTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesRamonTheme = document.getElementById("snesRamonTheme");
     snesRamonTheme.play();
   }
@@ -724,9 +785,15 @@ function showYoko1() {
   snesLuger = 0;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesYokoTheme = document.getElementById("snesYokoTheme");
+    snesYokoTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesYokoTheme = document.getElementById("snesYokoTheme");
     snesYokoTheme.play();
   }
@@ -769,9 +836,15 @@ function showLuger1() {
   snesLuger = 1;
   snesDiBiase = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesLugerTheme = document.getElementById("snesLugerTheme");
+    snesLugerTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesLugerTheme = document.getElementById("snesLugerTheme");
     snesLugerTheme.play();
   }
@@ -814,9 +887,15 @@ function showDiBiase1() {
   snesLuger = 0;
   snesDiBiase = 1;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var snesDiBiaseTheme = document.getElementById("snesDiBiaseTheme");
+    snesDiBiaseTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var snesDiBiaseTheme = document.getElementById("snesDiBiaseTheme");
     snesDiBiaseTheme.play();
   }
@@ -860,9 +939,15 @@ function showMacho2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaMachoTheme = document.getElementById("segaMachoTheme");
+    segaMachoTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaMachoTheme = document.getElementById("segaMachoTheme");
     segaMachoTheme.play();
   }
@@ -911,9 +996,15 @@ function showHart2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaHartTheme = document.getElementById("segaHartTheme");
+    segaHartTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaHartTheme = document.getElementById("segaHartTheme");
     segaHartTheme.play();
   }
@@ -959,9 +1050,16 @@ function showHogan2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaHoganTheme = document.getElementById("segaHoganTheme");
+    segaHoganTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
+
     var segaHoganTheme = document.getElementById("segaHoganTheme");
     segaHoganTheme.play();
   }
@@ -1007,9 +1105,15 @@ function showTaker2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaTakerTheme = document.getElementById("segaTakerTheme");
+    segaTakerTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaTakerTheme = document.getElementById("segaTakerTheme");
     segaTakerTheme.play();
   }
@@ -1056,9 +1160,15 @@ function showCrush2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaCrushTheme = document.getElementById("segaCrushTheme");
+    segaCrushTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaCrushTheme = document.getElementById("segaCrushTheme");
     segaCrushTheme.play();
   }
@@ -1104,9 +1214,15 @@ function showDuggan2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaDugganTheme = document.getElementById("segaDugganTheme");
+    segaDugganTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaDugganTheme = document.getElementById("segaDugganTheme");
     segaDugganTheme.play();
   }
@@ -1152,9 +1268,15 @@ function showLuger2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaLugerTheme = document.getElementById("segaLugerTheme");
+    segaLugerTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaLugerTheme = document.getElementById("segaLugerTheme");
     segaLugerTheme.play();
   }
@@ -1202,9 +1324,15 @@ function showHBK2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaHBKTheme = document.getElementById("segaHBKTheme");
+    segaHBKTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaHBKTheme = document.getElementById("segaHBKTheme");
     segaHBKTheme.play();
   }
@@ -1250,9 +1378,15 @@ function showMartel2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaMartelTheme = document.getElementById("segaMartelTheme");
+    segaMartelTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaMartelTheme = document.getElementById("segaMartelTheme");
     segaMartelTheme.play();
   }
@@ -1298,9 +1432,15 @@ function showShango2() {
   segaRamon = 0;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaShangoTheme = document.getElementById("segaShangoTheme");
+    segaShangoTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaShangoTheme = document.getElementById("segaShangoTheme");
     segaShangoTheme.play();
   }
@@ -1347,9 +1487,15 @@ function showRazor2() {
   segaRamon = 1;
   segaIRS = 0;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaRamonTheme = document.getElementById("segaRamonTheme");
+    segaRamonTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaRamonTheme = document.getElementById("segaRamonTheme");
     segaRamonTheme.play();
   }
@@ -1396,9 +1542,15 @@ function showIRS2() {
   segaRamon = 0;
   segaIRS = 1;
 
-  if (entranceMusicOn === 1) {
+  if (entranceMusicOn === 1 && menuMusicOn === 0) {
     stopAudio();
     menuMusicOn = 0;
+    var segaIRSTheme = document.getElementById("segaIRSTheme");
+    segaIRSTheme.play();
+  }
+
+  if (entranceMusicOn === 1 && menuMusicOn === 1) {
+    stopAudio();
     var segaIRSTheme = document.getElementById("segaIRSTheme");
     segaIRSTheme.play();
   }
