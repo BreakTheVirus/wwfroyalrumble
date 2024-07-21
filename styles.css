@@ -335,8 +335,10 @@ sup {
   .flexContent > div > div {width: 90%;}
   .bioContainer {width: 90%; margin: 0 auto; padding-top: 20px;}
   .characterBio > div  {width: 90%; display: flex; flex-direction: column;}
+  .characterBio > div > div {margin: 0 auto;}
   .sigArea {width: 90%;}
   .sigArea > div {width: 100%;}
+  #name {border: 1px solid lime;}
 }
 
 @media (max-width: 450px) {
